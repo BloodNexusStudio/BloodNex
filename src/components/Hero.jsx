@@ -2,8 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
-import { useEffect, useRef, useState } from "react";
-
+import { useEffect, useRef, useState, useCallback } from "react";
 import Button from "./Button";
 import VideoPreview from "./VideoPreview";
 
@@ -12,55 +11,82 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-
   const [loading, setLoading] = useState(true);
-  const [loadedVideos, setLoadedVideos] = useState(0);
-
+  const [videoCache, setVideoCache] = useState({});
+  
   const totalVideos = 4;
   const nextVdRef = useRef(null);
+  const videoRefs = useRef([]);
 
-  const handleVideoLoad = () => {
-    setLoadedVideos((prev) => prev + 1);
-  };
-
-  useEffect(() => {
-    if (loadedVideos === totalVideos - 1) {
-      setLoading(false);
+  // Cache videos in localStorage
+  const cacheVideo = useCallback(async (index) => {
+    const videoKey = `hero-video-${index}`;
+    if (!localStorage.getItem(videoKey)) {
+      try {
+        const response = await fetch(`videos/hero-${index}.mp4`);
+        const blob = await response.blob();
+        const reader = new FileReader();
+        reader.onload = () => {
+          localStorage.setItem(videoKey, reader.result);
+          setVideoCache(prev => ({ ...prev, [index]: reader.result }));
+        };
+        reader.readAsDataURL(blob);
+      } catch (error) {
+        console.error('Video caching failed:', error);
+      }
+    } else {
+      setVideoCache(prev => ({ 
+        ...prev, 
+        [index]: localStorage.getItem(videoKey) 
+      }));
     }
-  }, [loadedVideos]);
+  }, []);
+
+  // Preload all videos on mount
+  useEffect(() => {
+    for (let i = 1; i <= totalVideos; i++) {
+      cacheVideo(i);
+    }
+    
+    // Check if all videos are cached
+    const checkLoading = setInterval(() => {
+      if (Object.keys(videoCache).length === totalVideos) {
+        setLoading(false);
+        clearInterval(checkLoading);
+      }
+    }, 100);
+
+    return () => clearInterval(checkLoading);
+  }, [cacheVideo]);
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
-
     setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
   };
 
-  useGSAP(
-    () => {
-      if (hasClicked) {
-        gsap.set("#next-video", { visibility: "visible" });
-        gsap.to("#next-video", {
-          transformOrigin: "center center",
-          scale: 1,
-          width: "100%",
-          height: "100%",
-          duration: 1,
-          ease: "power1.inOut",
-          onStart: () => nextVdRef.current.play(),
-        });
-        gsap.from("#current-video", {
-          transformOrigin: "center center",
-          scale: 0,
-          duration: 1.5,
-          ease: "power1.inOut",
-        });
-      }
-    },
-    {
-      dependencies: [currentIndex],
-      revertOnUpdate: true,
+  useGSAP(() => {
+    if (hasClicked) {
+      gsap.set("#next-video", { visibility: "visible" });
+      gsap.to("#next-video", {
+        transformOrigin: "center center",
+        scale: 1,
+        width: "100%",
+        height: "100%",
+        duration: 1,
+        ease: "power1.inOut",
+        onStart: () => nextVdRef.current?.play(),
+      });
+      gsap.from("#current-video", {
+        transformOrigin: "center center",
+        scale: 0,
+        duration: 1.5,
+        ease: "power1.inOut",
+      });
     }
-  );
+  }, {
+    dependencies: [currentIndex],
+    revertOnUpdate: true,
+  });
 
   useGSAP(() => {
     gsap.set("#video-frame", {
@@ -80,7 +106,9 @@ const Hero = () => {
     });
   });
 
-  const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+  const getVideoSrc = (index) => {
+    return videoCache[index] || `videos/hero-${index}.mp4`;
+  };
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
@@ -112,7 +140,6 @@ const Hero = () => {
                   muted
                   id="current-video"
                   className="size-64 origin-center scale-150 object-cover object-center"
-                  onLoadedData={handleVideoLoad}
                 />
               </div>
             </VideoPreview>
@@ -125,52 +152,23 @@ const Hero = () => {
             muted
             id="next-video"
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
-            onLoadedData={handleVideoLoad}
           />
+          
           <video
-            src={getVideoSrc(
-              currentIndex === totalVideos - 1 ? 1 : currentIndex
-            )}
+            src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
             autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
-            onLoadedData={handleVideoLoad}
           />
         </div>
 
-        {/* <h1
-  className="font-montserrat hero-heading absolute bottom-5 z-40 text-blue-75"
-  style={{ right: "80px" }} // Original 5px + 10px = 15px
->
-  s<b>T</b>UDIO
-</h1> */}
-
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-20 px-4 sm:px-10">
-          {/* <h1 className="font-roller-coaster-serif hero-heading">
-  <span className="text-red-blood">Blood</span>
-  <b>n</b>exus
-</h1> */}
-
-
-            {/* <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              At BN Studios, we're a passionate team crafting memorable
-            </p> */}
-
-            {/* <Button
-              id="watch-trailer"
-              title="Watch trailer"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
-            /> */}
+            {/* Add your content here */}
           </div>
         </div>
       </div>
-{/* 
-      <h1 className="font-montserrat hero-heading absolute bottom-5 right-5 text-black">
-        S<b>T</b>UDIO
-      </h1> */}
     </div>
   );
 };
