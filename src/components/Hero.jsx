@@ -13,7 +13,8 @@ const Hero = () => {
   const [hasClicked, setHasClicked] = useState(false);
   const [loading, setLoading] = useState(true);
   const [videoCache, setVideoCache] = useState({});
-  
+  const [showContent, setShowContent] = useState(false);
+
   const totalVideos = 4;
   const nextVdRef = useRef(null);
   const videoRefs = useRef([]);
@@ -24,15 +25,19 @@ const Hero = () => {
     if (!localStorage.getItem(videoKey)) {
       try {
         const response = await fetch(`videos/hero-${index}.mp4`);
+        if (!response.ok) throw new Error('Video fetch failed');
         const blob = await response.blob();
         const reader = new FileReader();
         reader.onload = () => {
           localStorage.setItem(videoKey, reader.result);
           setVideoCache(prev => ({ ...prev, [index]: reader.result }));
         };
+        reader.onerror = () => console.error('Reading video failed');
         reader.readAsDataURL(blob);
       } catch (error) {
         console.error('Video caching failed:', error);
+        // Fallback to direct URL
+        setVideoCache(prev => ({ ...prev, [index]: `videos/hero-${index}.mp4` }));
       }
     } else {
       setVideoCache(prev => ({ 
@@ -42,22 +47,26 @@ const Hero = () => {
     }
   }, []);
 
-  // Preload all videos on mount
+  // Preload all videos on mount and handle progressive loading
   useEffect(() => {
     for (let i = 1; i <= totalVideos; i++) {
       cacheVideo(i);
     }
     
-    // Check if all videos are cached
+    // Check loading status
     const checkLoading = setInterval(() => {
-      if (Object.keys(videoCache).length === totalVideos) {
+      const cachedCount = Object.keys(videoCache).length;
+      if (cachedCount >= 1 && !showContent) {
+        setShowContent(true); // Show content after first video loads
+      }
+      if (cachedCount === totalVideos) {
         setLoading(false);
         clearInterval(checkLoading);
       }
     }, 100);
 
     return () => clearInterval(checkLoading);
-  }, [cacheVideo]);
+  }, [cacheVideo, showContent]);
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -163,12 +172,34 @@ const Hero = () => {
           />
         </div>
 
-        <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-20 px-4 sm:px-10">
-            {/* Add your content here */}
+        {showContent && (
+          <div className="absolute left-0 top-0 z-40 size-full">
+            <div className="mt-20 px-4 sm:px-10">
+              {/* Uncomment and customize your content */}
+              {/* <h1 className="font-roller-coaster-serif hero-heading">
+                <span className="text-red-blood">Blood</span>
+                <b>n</b>exus
+              </h1> */}
+              
+              {/* <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
+                At BN Studios, we're a passionate team crafting memorable
+              </p> */}
+
+              {/* <Button
+                id="watch-trailer"
+                title="Watch trailer"
+                leftIcon={<TiLocationArrow />}
+                containerClass="bg-yellow-300 flex-center gap-1"
+              /> */}
+            </div>
           </div>
-        </div>
+        )}
       </div>
+
+      {/* Uncomment if you need the bottom heading */}
+      {/* <h1 className="font-montserrat hero-heading absolute bottom-5 right-5 text-black">
+        S<b>T</b>UDIO
+      </h1> */}
     </div>
   );
 };
