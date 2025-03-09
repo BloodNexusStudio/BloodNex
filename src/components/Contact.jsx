@@ -2,7 +2,7 @@ import AnimatedTitle from "./AnimatedTitle";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
-    <img src={src} alt="Decorative" />
+    <img src={src}  />
   </div>
 );
 
@@ -48,7 +48,7 @@ const Contact = () => {
               href="mailto:example@gmail.com"
               className="text-blue-400 hover:underline"
             >
-              blood
+             bloodnexusstudio@gmail.com
             </a>
             <p className="mt-2">Phone: <span className="font-semibold">+91 90042 56802</span></p>
           </div>
