@@ -124,18 +124,19 @@ const Features = () => (
       </BentoTilt>
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
-  <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
-          <BentoCard
-            src="videos/features-6.mp4"
-            title={
-              <>
-                Hy<b>p</b>er Realism 3D
-              </>
-            }
-            description="Optimized 3D models "
-            isComingSoon
-          />
-        </BentoTilt>
+      <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+  <BentoCard
+    src="videos/features-6.mp4" // Updated to your new video file
+    title={
+      <>
+        Cha<b>ra</b>cter
+        D<b>esi</b>gn
+      </>
+    }
+    description=""
+    isComingSoon
+  />
+</BentoTilt>
 
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
@@ -145,20 +146,20 @@ const Features = () => (
                 n<b>e</b>xus
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            //description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             isComingSoon
           />
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
-            src="videos/hero-4.mp4"
+            src="videos/hero-2.mp4"
             title={
               <>
-                Hy<b>p</b>er Car
+                Hy<b>p</b>er Realism 3D
               </>
             }
-            description="Optimized 3D models with detailed textures and materials."
+            description="Optimized 3D models "
             isComingSoon
           />
         </BentoTilt>
@@ -175,13 +176,14 @@ const Features = () => (
 
         <BentoTilt className="bento-tilt_2">
           <video
-            src="videos/hero-2.mp4"
+            src="videos/hero-4.mp4"
             loop
             muted
             autoPlay
             className="size-full object-cover object-center"
           />
         </BentoTilt>
+        
       </div>
     </div>
   </section>
