@@ -147,14 +147,15 @@ const Hero = () => {
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              At BN Studios, we're a passionate team crafting memorable
+              At BN Studios, we're a passionate team crafting memorable 
             </p>
 
             <Button
               id="watch-trailer"
-              
+              title="Watch trailer"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
+              onClick={() => window.open("https://www.youtube.com/@BloodNexusStudio")}
             />
           </div>
         </div>
