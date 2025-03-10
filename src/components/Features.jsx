@@ -118,7 +118,7 @@ const Features = () => (
               Nex<b>u</b>s
             </>
           }
-          description="A cross-platform WebApp"
+          description="Environment and Asset creation"
           isComingSoon
         />
       </BentoTilt>
@@ -167,7 +167,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font max-w-64 text-black">
-              M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
+           S<b>t</b>ay tu<b>n</b>ed for up<b>d</b>ates.
             </h1>
 
             <TiLocationArrow className="m-5 scale-[5] self-end" />
