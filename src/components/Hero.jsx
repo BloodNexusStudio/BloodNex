@@ -139,38 +139,30 @@ const Hero = () => {
           />
         </div>
 
-        {/* <h1
-  className="font-montserrat hero-heading absolute bottom-5 z-40 text-blue-75"
-  style={{ right: "80px" }} // Original 5px + 10px = 15px
->
-  s<b>T</b>UDIO
-</h1> */}
+        <div className="absolute left-0 top-0 z-30 size-full">
+          <div className="mt-20 px-4 sm:px-8">
+            <h1 className="font-roller-coaster-serif hero-heading">
+              <span className="text-red-blood">Blood</span>
+              <b className="text-offWhite">n</b>exus
+            </h1>
 
-        <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-20 px-4 sm:px-10">
-          {/* <h1 className="font-roller-coaster-serif hero-heading">
-  <span className="text-red-blood">Blood</span>
-  <b>n</b>exus
-</h1> */}
-
-
-            {/* <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
+            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
               At BN Studios, we're a passionate team crafting memorable
-            </p> */}
+            </p>
 
-            {/* <Button
+            <Button
               id="watch-trailer"
-              title="Watch trailer"
+              
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
-            /> */}
+            />
           </div>
         </div>
       </div>
-{/* 
+
       <h1 className="font-montserrat hero-heading absolute bottom-5 right-5 text-black">
         S<b>T</b>UDIO
-      </h1> */}
+      </h1>
     </div>
   );
 };
