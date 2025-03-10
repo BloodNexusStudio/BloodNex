@@ -1,118 +1,68 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/zA9r5zTllx4" target="_blank">
-      <img src="https://github.com/user-attachments/assets/ab600f24-f4d9-4cef-8f1e-3fd9194afb30" alt="Project Banner">
+    <a href="https://bloodNexus.studio" target="_blank">
+      <img src="https://via.placeholder.com/1200x400" alt="BloodNexus Studio Banner">
     </a>
   <br />
-
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
     <img src="https://img.shields.io/badge/-GSAP-black?style=for-the-badge&logoColor=white&logo=greensock&color=88CE02" alt="greensock" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
-
-  <h3 align="center">An Awwwards Winning Website</h3>
-
+  <h3 align="center">BloodNexus Studio - Immersive Digital Experiences</h3>
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+     Crafting cutting-edge digital experiences with a focus on stunning visuals and seamless interactions.
     </div>
 </div>
+📋 <a name="table">Table of Contents</a>
 
-## 📋 <a name="table">Table of Contents</a>
+🤖 Introduction
+⚙️ Tech Stack
+🔋 Features
+🤸 Quick Start
+🕸️ Snippets (Code to Copy)
+🔗 Assets
+🚀 More
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
+<a name="introduction">🤖 Introduction</a>
+BloodNexus Studio specializes in creating visually captivating websites featuring scroll-triggered animations, geometric transitions, and engaging video storytelling. Our designs deliver a luxurious, modern feel, focusing on engaging UI/UX and smooth responsiveness, capturing the essence of award-winning digital experiences.
+Join our community where creative professionals collaborate and push the boundaries of digital design.
+<a name="tech-stack">⚙️ Tech Stack</a>
 
-## ⚠️ Disclaimer
+GSAP
+React.js
+Tailwind CSS
 
-All design credits go to **[Zentry](https://zentry.com/)**. This project is created purely for **educational purposes** and is not intended for commercial use or public deployment.
-
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/zA9r5zTllx4" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
-## <a name="introduction">🤖 Introduction</a>
-
-Build a visually captivating website inspired by **[Zentry](https://zentry.com/)**, featuring scroll-triggered animations, geometric transitions, and engaging video storytelling. Learn how to deliver a luxurious, modern feel, focusing on engaging UI/UX and smooth responsiveness, capturing the essence of what makes an Awwwards winner.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **47k+** members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- GSAP
-- React.js
-- Tailwind CSS
-
-## <a name="features">🔋 Features</a>
-
-👉 **Scroll-Based Animations**: Dynamic animations triggered by scrolling for a more engaging user experience.
-
-👉 **Clip Path Shaped Animations**: Unique geometric transitions using CSS clip-paths to create visually stunning effects.
-
-👉 **3D Hover Effects**: Interactive 3D transformations that respond to user interactions for a modern feel.
-
-👉 **Video Transitions**: Seamlessly integrated video elements to enhance storytelling and flow.
-
-👉 **Smooth UI/UX**: Polished interfaces with buttery-smooth interactions for an intuitive user journey.
-
-👉 **Completely Responsive**: Flawless adaptation across all devices, ensuring a consistent experience.
-
+<a name="features">🔋 Features</a>
+👉 Scroll-Based Animations: Dynamic animations triggered by scrolling for a more engaging user experience.
+👉 Clip Path Shaped Animations: Unique geometric transitions using CSS clip-paths to create visually stunning effects.
+👉 3D Hover Effects: Interactive 3D transformations that respond to user interactions for a modern feel.
+👉 Video Transitions: Seamlessly integrated video elements to enhance storytelling and flow.
+👉 Smooth UI/UX: Polished interfaces with buttery-smooth interactions for an intuitive user journey.
+👉 Completely Responsive: Flawless adaptation across all devices, ensuring a consistent experience.
 and many more, including code architecture and reusability
-
-## <a name="quick-start">🤸 Quick Start</a>
-
+<a name="quick-start">🤸 Quick Start</a>
 Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
+Prerequisites
 Make sure you have the following installed on your machine:
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+Git
+Node.js
+npm (Node Package Manager)
 
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/award-winning-website.git
-cd award-winning-website
-```
-
-**Installation**
-
+Cloning the Repository
+bashCopygit clone https://github.com/BloodNexusStudio/bloodNexus-website.git
+cd bloodNexus-website
+Installation
 Install the project dependencies using npm:
-
-```bash
-npm install
-```
-
-**Running the Project**
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
-
-## <a name="snippets">🕸️ Snippets</a>
-
+bashCopynpm install
+Running the Project
+bashCopynpm run dev
+Open http://localhost:5173 in your browser to view the project.
+<a name="snippets">🕸️ Snippets</a>
 <details>
 <summary><code>index.css</code></summary>
-
-```css
-@import url("https://fonts.cdnfonts.com/css/general-sans");
+cssCopy@import url("https://fonts.cdnfonts.com/css/general-sans");
 
 @tailwind base;
 @tailwind components;
@@ -121,7 +71,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: #dfdff0;
+  background-color: #191919;
   font-family: "General Sans", sans-serif;
 }
 
@@ -147,22 +97,22 @@ body {
   }
 
   @font-face {
-    font-family: "zentry";
-    src: url("/fonts/zentry-regular.woff2") format("woff2");
+    font-family: "bloodNexus";
+    src: url("/fonts/bloodNexus-regular.woff2") format("woff2");
   }
 }
 
 @layer utilities {
   .border-hsla {
-    @apply border border-white/20;
+    @apply border border-red-500/20;
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-xs uppercase text-red-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-red-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
   }
 
   .floating-nav {
-    @apply bg-black rounded-lg border;
+    @apply bg-black rounded-lg border border-red-900/50;
   }
 
   .absolute-center {
@@ -178,16 +128,16 @@ body {
   }
 
   .special-font b {
-    font-family: "Zentry";
+    font-family: "bloodNexus";
     font-feature-settings: "ss01" on;
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-bloodNexus font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem] text-red-600;
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
+    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem] text-gray-200;
   }
 
   .about-image {
@@ -195,11 +145,11 @@ body {
   }
 
   .animated-title {
-    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-red-500 sm:px-32 md:text-[6rem];
   }
 
   .animated-word {
-    @apply special-font font-zentry font-black opacity-0;
+    @apply special-font font-bloodNexus font-black opacity-0;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;
@@ -214,7 +164,7 @@ body {
   }
 
   .bento-title {
-    @apply uppercase md:text-6xl text-4xl font-black font-zentry;
+    @apply uppercase md:text-6xl text-4xl font-black font-bloodNexus text-red-600;
   }
 
   .story-img-container {
@@ -233,7 +183,7 @@ body {
   }
 
   .gallery-img-container {
-    @apply size-64 overflow-hidden bg-violet-300;
+    @apply size-64 overflow-hidden bg-red-900;
   }
 
   .gallery-img {
@@ -258,7 +208,7 @@ body {
 }
 
 .indicator-line {
-  @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+  @apply h-1 w-px rounded-full bg-red-500 transition-all duration-200 ease-in-out;
 }
 
 .indicator-line.active {
@@ -281,12 +231,10 @@ body {
   }
 }
 
-/* From Uiverse.io by G4b413l */
-/* https://uiverse.io/G4b413l/tidy-walrus-92 */
 .three-body {
   --uib-size: 35px;
   --uib-speed: 0.8s;
-  --uib-color: #5d3fd3;
+  --uib-color: #be0000;
   position: relative;
   display: inline-block;
   height: var(--uib-size);
@@ -385,15 +333,10 @@ body {
     opacity: 0.8;
   }
 }
-```
-
 </details>
-
 <details>
   <summary><code>components/RoundedCorners.jsx</code></summary>
-
-```js
-import React from 'react'
+jsCopyimport React from 'react'
 
 const RoundedCorners = () => {
   return (
@@ -425,26 +368,13 @@ const RoundedCorners = () => {
   )
 }
 export default RoundedCorners
-```
-
 </details>
+<a name="links">🔗 Assets</a>
+Assets used in the project are proprietary to BloodNexus Studio.
+For developers working on this project, please access our design assets through our private repository. Contact your team lead for access.
+<a name="more">🚀 More</a>
+Explore BloodNexus Studio's Portfolio
+Discover more of our captivating projects and immersive digital experiences by visiting our portfolio.
+For collaboration opportunities or to discuss your next project, reach out to us at contact@bloodNexus.studio.
 
-## <a name="links">🔗 Assets</a>
-
-Assets used in the project can be found [here](https://drive.google.com/file/d/12hCVnanOAUmM1vzz2dTWZ_uEFGG8xDcT/view?usp=sharing)
-
-> This project uses some assets and fonts from **[Zentry](https://zentry.com/)** purely for educational and demonstration purposes. All rights to these assets and fonts belong to their respective owners. If you plan to use this project commercially or publicly, please replace these assets and fonts with ones you own or have permission to use. This project is not affiliated with or endorsed by **[Zentry](https://zentry.com/)**.
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://jsmastery.pro/next15" target="_blank">
-   <img src="https://github.com/user-attachments/assets/b8760e69-1f81-4a71-9108-ceeb1de36741" alt="Project Banner">
-</a>
-# BloodNex
-# BloodNex
-# BloodNex
+© 2025 BloodNexus Studio. All Rights Reserved.
