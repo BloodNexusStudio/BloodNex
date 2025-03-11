@@ -52,7 +52,7 @@ const FloatingImage = () => {
 
         <div className="relative size-full">
           <AnimatedTitle
-            title="wh<b>i</b>spers of the<br /> Blood Nexuses<b></b>"
+            title="Where <b>i</b>nnovation meets the<br /> arcane<b></b>"
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
 
@@ -106,15 +106,16 @@ const FloatingImage = () => {
 
         <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
-            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-              Where realms converge
-            </p>
+            {/* <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+              Where realms meet, new stories begin.
+            </p> */}
 
-            <Button
-              id="realm-btn"
-              title="discover prologue"
-              containerClass="mt-5"
-            />
+            {/* <Button
+                id="realm-btn"
+                title="Discover Prologue"
+                containerClass="mt-5"
+                onClick={() => window.open("https://www.youtube.com/@BloodNexusStudio", "_blank")}
+/> */}
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
-import { FaDiscord, FaTwitter, FaYoutube, FaMedium } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaYoutube, FaMedium, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
-  { href: "https://discord.gg/rCgMV3Y9", icon: <FaDiscord /> },
-  { href: "https://twitter.com", icon: <FaTwitter /> },
-  { href: "https://youtube.com", icon: <FaYoutube /> },
-  { href: "https://medium.com", icon: <FaMedium /> },
+  { href: "https://discord.gg/McnD5FFW", icon: <FaDiscord /> },
+  //{ href: "https://twitter.com", icon: <FaTwitter /> },
+  { href: "https://www.youtube.com/@BloodNexusStudio", icon: <FaYoutube /> },
+ // { href: "https://medium.com", icon: <FaMedium /> },
+  { href: "https://www.instagram.com/bloodnexusstudio?igsh=MWhlZGN3Y3RwbXZpZw==", icon: <FaInstagram /> },
+  { href: "https://www.linkedin.com/company/blood-nexus-studio/", icon: <FaLinkedin /> },
 ];
 
 const Footer = () => {
@@ -15,7 +17,7 @@ const Footer = () => {
           ©BN 2024. All rights reserved
         </p>
 
-        <div className="flex justify-center gap-4  md:justify-start">
+        <div className="flex justify-center gap-4 md:justify-start">
           {socialLinks.map((link, index) => (
             <a
               key={index}

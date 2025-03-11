@@ -33,7 +33,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <p className="mb-10 font-general text-[10px] uppercase">
+          <p className="mb-10 font-general text-[30px] uppercase">
             Join BloodNexus
           </p>
 
@@ -50,7 +50,7 @@ const Contact = () => {
             >
              bloodnexusstudio@gmail.com
             </a>
-            <p className="mt-2">Phone: <span className="font-semibold">+91 90042 56802</span></p>
+            <p className="mt-2">Phone: <span className="font-semibold">+91 7208859204</span></p>
           </div>
         </div>
       </div>
