@@ -143,27 +143,29 @@ const Hero = () => {
           <div className="mt-20 px-4 sm:px-8">
             <h1 className="font-roller-coaster-serif hero-heading">
               <span className="text-red-blood">Blood</span>
-              <b className="text-offWhite">n</b>exus
+              <b className="text-white">nexus</b>
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              At BN Studios, we're a passionate team crafting memorable 
+            At BN Studios, we're a passionate team crafting memorable gaming experiences that captivate and inspire players worldwide
             </p>
 
             <Button
-              id="watch-trailer"
-              title="Watch trailer"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
-              onClick={() => window.open("https://www.youtube.com/@BloodNexusStudio")}
-            />
+  id="watch-trailer"
+  title="Watch Trailer"
+  leftIcon={<TiLocationArrow />}
+  containerClass="bg-yellow-300 flex-center gap-1"
+  onClick={() => { 
+    console.log("Button clicked!"); 
+    window.open("https://www.youtube.com/@BloodNexusStudio", "_blank"); 
+  }}              
+/>
+
           </div>
         </div>
       </div>
 
-      <h1 className="font-montserrat hero-heading absolute bottom-5 right-5 text-black">
-        S<b>T</b>UDIO
-      </h1>
+    
     </div>
   );
 };
