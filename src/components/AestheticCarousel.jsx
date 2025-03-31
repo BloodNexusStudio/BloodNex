@@ -17,7 +17,7 @@ const AestheticCarousel = () => {
       },
       {
         id: 2,
-        imageUrl: "/img/c2.jpeg",
+        imageUrl: "/img/c2.jpg",
         title: "Epic Characters",
         description: "Encounter unforgettable heroes and villains"
       },
