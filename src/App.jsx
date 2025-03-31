@@ -6,6 +6,7 @@ import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ImageSequence from "./components/ImageSequence";
+import AestheticCarousel from "./components/AestheticCarousel";
 //import Cube from "./components/Cube";
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
       <Hero/>
       <About />
       <Features />
+      <AestheticCarousel />
       <Story />
+      {/* <Cube /> */}
       <Contact />
       <Footer />
       <ImageSequence/>
