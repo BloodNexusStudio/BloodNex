@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import NavBar from "./components/Navbar";
@@ -7,32 +8,53 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ImageSequence from "./components/ImageSequence";
 import AestheticCarousel from "./components/AestheticCarousel";
-import SplineViewer from "./components/SplineViewer"; // Added SplineViewer import
-//import Cube from "./components/Cube";
+import SplineViewer from "./components/SplineViewer";
 
 function App() {
-  // Check if "/play" is in the current URL path
-  const showSplineViewer = window.location.pathname.includes("/play");
-
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden">
-      {showSplineViewer ? (
-        <SplineViewer />
-      ) : (
-        <>
-          <NavBar />
-          <Hero />
-          <About />
-          <Features />
-          <AestheticCarousel />
-          <Story />
-          {/* <Cube /> */}
-          <Contact />
-          <Footer />
-          <ImageSequence />
-        </>
-      )}
-    </main>
+    <BrowserRouter>
+      <main className="relative min-h-screen w-screen overflow-x-hidden">
+        <Routes>
+          <Route
+            path="/play"
+            element={<SplineViewer />}
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                <NavBar />
+                <Hero />
+                <About />
+                <Features />
+                <AestheticCarousel />
+                <Story />
+                <Contact />
+                <Footer />
+                <ImageSequence />
+              </>
+            }
+          />
+          {/* Optional: Catch-all route for 404 */}
+          <Route
+            path="*"
+            element={
+              <>
+                <NavBar />
+                <Hero />
+                <About />
+                <Features />
+                <AestheticCarousel />
+                <Story />
+                <Contact />
+                <Footer />
+                <ImageSequence />
+              </>
+            }
+          />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
