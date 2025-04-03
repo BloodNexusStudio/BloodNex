@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import NavBar from "./components/Navbar";
@@ -11,50 +11,36 @@ import AestheticCarousel from "./components/AestheticCarousel";
 import SplineViewer from "./components/SplineViewer";
 
 function App() {
+  const [showSplineViewer, setShowSplineViewer] = useState(
+    window.location.pathname.includes("/play")
+  );
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setShowSplineViewer(window.location.pathname.includes("/play"));
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   return (
-    <BrowserRouter>
-      <main className="relative min-h-screen w-screen overflow-x-hidden">
-        <Routes>
-          <Route
-            path="/play"
-            element={<SplineViewer />}
-          />
-          <Route
-            path="/"
-            element={
-              <>
-                <NavBar />
-                <Hero />
-                <About />
-                <Features />
-                <AestheticCarousel />
-                <Story />
-                <Contact />
-                <Footer />
-                <ImageSequence />
-              </>
-            }
-          />
-          {/* Optional: Catch-all route for 404 */}
-          <Route
-            path="*"
-            element={
-              <>
-                <NavBar />
-                <Hero />
-                <About />
-                <Features />
-                <AestheticCarousel />
-                <Story />
-                <Contact />
-                <Footer />
-                <ImageSequence />
-              </>
-            }
-          />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
+      {showSplineViewer ? (
+        <SplineViewer />
+      ) : (
+        <>
+          <NavBar />
+          <Hero />
+          <About />
+          <Features />
+          <AestheticCarousel />
+          <Story />
+          <Contact />
+          <Footer />
+          <ImageSequence />
+        </>
+      )}
+    </main>
   );
 }
 
